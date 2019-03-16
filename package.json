@@ -11,6 +11,14 @@
   "author": "mizuki_r",
   "license": "UNLICENSED",
   "dependencies": {
+    "@nuxtjs/markdownit": "^1.2.3",
+    "contentful": "^7.4.3",
     "nuxt": "^2.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^11.11.3",
+    "prettier": "^1.16.4",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3333"
   }
 }
