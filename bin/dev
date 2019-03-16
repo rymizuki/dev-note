@@ -1,0 +1,10 @@
+#!/bin/sh
+docker run \
+  -it \
+  --rm \
+  --name dev-note \
+  -v $(pwd):/usr/local/docker/app \
+  -p 50400:3000 \
+  -e HOST=0.0.0.0 \
+  --env-file .env \
+  dev-note

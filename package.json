@@ -1,0 +1,16 @@
+{
+  "name": "dev-note",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mizuki_r",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "nuxt": "^2.4.5"
+  }
+}
