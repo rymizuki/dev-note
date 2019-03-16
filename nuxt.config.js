@@ -22,7 +22,8 @@ module.exports = {
    */
   modules: ['@nuxtjs/markdownit'],
   markdownit: {
-    injected: true
+    injected: true,
+    use: [['markdown-it-plantuml']]
   },
 
   /**
