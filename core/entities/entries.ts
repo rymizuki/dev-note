@@ -1,10 +1,10 @@
 import { Entry } from './entry'
 
 export class Entries {
-  constructor(private entries: Entry[], private limit: number) {}
+  constructor(private rows: Entry[], private limit: number) {}
   toJson() {
     return {
-      rows: this.entries.map((entry) => entry.toJson),
+      rows: this.rows.map((entry) => entry.toJson()),
       limit: this.limit
     }
   }

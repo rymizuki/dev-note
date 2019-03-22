@@ -1,3 +1,4 @@
+import * as dateFormat from 'date-format'
 export class Entry {
   constructor(
     private id: string,
@@ -11,7 +12,8 @@ export class Entry {
       id: this.id,
       subject: this.subject,
       body: this.body,
-      created_at: this.created_at,
+      headline: this.body.replace(/\n/g, ' ').replace(/#+/g, ''),
+      created_at: dateFormat('yyyy/MM/dd hh:mm', new Date(this.created_at)),
       updated_at: this.updated_at
     }
   }

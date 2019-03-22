@@ -9,8 +9,20 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+    ],
+    link: [
+      {
+        rel: 'stylesheet',
+        // href: 'https://fonts.googleapis.com/css?family=Sawarabi+Gothic'
+        href: 'https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c'
+      }
     ]
   },
+
+  /**
+   * CSS
+   */
+  css: [],
 
   /**
    * Customize the progress-bar color

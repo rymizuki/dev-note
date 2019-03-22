@@ -18,6 +18,9 @@ export const mutations = {
   fetchEntriesResolve(state, entries) {
     state.entries = entries
   },
+  fetchEntry(state) {
+    state.current = null
+  },
   fetchEntryResolve(state, entry) {
     state.current = entry
   }
@@ -30,6 +33,7 @@ export const actions = {
     commit('fetchEntriesResolve', entries.toJson())
   },
   async fetchEntry({ commit }, id: string) {
+    commit('fetchEntry')
     const entry = await new EntriesRepository(createClient()).findOne(id)
     commit('fetchEntryResolve', entry.toJson())
   }

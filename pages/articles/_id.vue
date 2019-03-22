@@ -1,8 +1,13 @@
 <template>
   <main>
-    <article v-if="entry">
+    <article v-if="entry" class="article">
       <h1>{{entry.subject}}</h1>
       <div v-html="$md.render(entry.body)"></div>
+      <footer>
+        <div class="published">
+          <time>{{entry.created_at}}</time>
+        </div>
+      </footer>
     </article>
   </main>
 </template>
@@ -21,3 +26,12 @@ export default {
 }
 </script>
 
+<style lang="stylus" scoped>
+@import '../../assets/styles/foundation.styl';
+
+.article {
+  padding: 4px 8px;
+  background: $color-white;
+  color: $color-black;
+}
+</style>
